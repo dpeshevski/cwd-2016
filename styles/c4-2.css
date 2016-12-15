@@ -1,0 +1,32 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+div.pic-modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;	
+	background-color: rgba(0, 0, 0, .7);
+	/*display: table;*/
+	display: none;
+}
+
+	div.pic-modal .cell {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+	}
+
+img.thumb {
+	height: 100px;
+}
