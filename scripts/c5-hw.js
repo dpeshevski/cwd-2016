@@ -16,7 +16,6 @@ function renderTable(){
 
 	for(let i = 0; i < students.length; i++){
 		var tr = document.createElement('tr');
-		tr.id = students[i].email;
 
 		var td1 = document.createElement('td');
 		var td2 = document.createElement('td');
@@ -29,15 +28,14 @@ function renderTable(){
 		td2.innerText = students[i].lastname;
 		td3.innerText = students[i].average;
 		td4.innerText = students[i].email;
-		
-		deleteBtn.addEventListener('click', function(){
-			console.log(this);
-			removeElement(this.dataset.email);
-		});
 
 		deleteBtn.dataset.email = students[i].email;
 		deleteBtn.innerText = ' Delete ';
 		td5.appendChild(deleteBtn);
+		
+		deleteBtn.addEventListener('click', function(){
+			removeElement(this.dataset.email);
+		});
 
 		tr.appendChild(td1);
 		tr.appendChild(td2);
@@ -63,7 +61,6 @@ function removeElement(elementId){
 }
 
 addBtn.addEventListener('click', function(){
-
 	var err = 0;
 
 	if(inputFirstname.value.length == 0){err++};
